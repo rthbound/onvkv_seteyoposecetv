@@ -330,7 +330,8 @@ module Conjugators
         # L-M-N rule
         ue_rule_substring = @verb_to_conjugate[(final_vowel_index-1)..final_vowel_index]
         return if ue_rule_substring == UE
-        return if %w{ mk lk nk }.include?(@verb_to_conjugate[(final_vowel_index+1)..(final_vowel_index+2)])
+        return if %w{ l m n }.include?(@verb_to_conjugate[final_vowel_index+1]) &&
+          consonants.include?(@verb_to_conjugate[final_vowel_index+2])
 
         # replace the final vowel with the l-graded vowel
         @verb_to_conjugate[final_vowel_index] = LGRADES.fetch(@verb_to_conjugate[final_vowel_index], @verb_to_conjugate[final_vowel_index])
