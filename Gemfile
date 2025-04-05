@@ -11,5 +11,3 @@ gem "minitest", "~> 5.0"
 gem "minitest-focus"
 gem "pry"
 gem "pry-byebug"
-
-gem "rubocop", "~> 1.21"
