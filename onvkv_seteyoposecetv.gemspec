@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage                      = "https://github.com/rthbound/onvkv_seteyoposecetv"
   spec.license                       = "MIT"
   spec.required_ruby_version         = ">= 2.6.0"
-  spec.metadata["allowed_push_host"] = "rubygems.org"
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
   spec.metadata["source_code_uri"]   = "https://github.com/rthbound/onvkv_seteyoposecetv"
   spec.metadata["changelog_uri"]     = "https://github.com/rthbound/onvkv_seteyoposecetv/blob/main/CHANGELOG.md"
   spec.metadata["homepage_uri"]      = "https://github.com/rthbound/onvkv_seteyoposecetv"
