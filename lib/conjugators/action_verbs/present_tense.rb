@@ -327,11 +327,15 @@ module Conjugators
         final_vowel_index = @verb_to_conjugate.rindex(VOWEL_REGEX)
         return unless final_vowel_index
 
-        # L-M-N rule
         ue_rule_substring = @verb_to_conjugate[(final_vowel_index-1)..final_vowel_index]
+        # dipthong rule
         return if ue_rule_substring == UE
-        return if %w{ l m n }.include?(@verb_to_conjugate[final_vowel_index+1]) &&
-          consonants.include?(@verb_to_conjugate[final_vowel_index+2])
+        # LMN rule: VlC, VmC, or VnC pattern (where V=vowel, C=consonant)
+        next_char = @verb_to_conjugate[final_vowel_index + 1]
+        next_next_char = @verb_to_conjugate[final_vowel_index + 2]
+        return if (next_char == L || next_char == M || next_char == N) &&
+                 next_next_char &&
+                 consonants.include?(next_next_char)
 
         # replace the final vowel with the l-graded vowel
         @verb_to_conjugate[final_vowel_index] = LGRADES.fetch(@verb_to_conjugate[final_vowel_index], @verb_to_conjugate[final_vowel_index])
