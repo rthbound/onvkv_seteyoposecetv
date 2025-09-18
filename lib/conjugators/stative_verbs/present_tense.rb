@@ -137,7 +137,7 @@ module Conjugators
         when"ē"
           "ecē" + @verb[1..-1]
         when "v"
-          "ece" + @verb
+          "ece" + @verb[1..-1]
         when "o"
           "ec"  + @verb
         when "e"
@@ -180,7 +180,7 @@ module Conjugators
         when"ē"
           "ecē" + verb[1..-1]
         when "v"
-          "ece" + verb
+          "ece" + @verb[1..-1]
         when "o"
           "ec"  + verb
         when "e"
