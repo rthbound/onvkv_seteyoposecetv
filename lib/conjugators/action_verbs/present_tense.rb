@@ -240,7 +240,7 @@ module Conjugators
               drop_the_etv!
               lgrade_final_vowel!
 
-              if @type == :tos_auxiliary
+              if @type == :tos_auxiliary || @type == :basic_durative
                 @verb_to_conjugate + 'eyē'
               else
                 add_person_marker!(person_marker)
@@ -253,7 +253,7 @@ module Conjugators
             @verb_to_conjugate = @verb.dup
             drop_the_etv!
             lgrade_final_vowel!
-            if @type == :tos_auxiliary
+            if @type == :tos_auxiliary || @type == :basic_durative
               @verb_to_conjugate + 'eyē'
             else
               add_person_marker!(person_marker)
