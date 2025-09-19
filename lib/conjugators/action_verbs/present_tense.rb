@@ -44,9 +44,20 @@ module Conjugators
             :conjugate_2ps => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
             :conjugate_1pp => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
             :conjugate_2pp => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
-            #:conjugate_3ps => { basic_present: [NA], basic_durative: [NA], ometv_conjugated_auxiliary: [NA] },
             :conjugate_3pp => { basic_present: [NA], basic_durative: [NA], ometv_conjugated_auxiliary: [NA] },
-          }
+          },
+          "mometv" => {
+            :conjugate_1ps => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
+            :conjugate_2ps => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
+            :conjugate_1pp => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
+            :conjugate_2pp => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
+          },
+          "mowetv" => {
+            :conjugate_1ps => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
+            :conjugate_2ps => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
+            :conjugate_1pp => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
+            :conjugate_2pp => { basic_present: [NA], basic_durative: [NA], tos_auxiliary: [NA], ometv_conjugated_auxiliary: [NA] },
+          },
         }
       end
 
