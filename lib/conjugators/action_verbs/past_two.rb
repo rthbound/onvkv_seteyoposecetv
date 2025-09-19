@@ -78,22 +78,22 @@ module Conjugators
           return "N/A" if @verb == "ometv" || @verb == "owetv"
           result = send(tense)
           if result[0].is_a?(String)
-            [result.map {|r| r + " towvnks" }]
+            [result.map {|r| r + "t owvnks" }]
           else
             if @irregular
               case result.size
               when 1
-                rr_2plus = result[0].map {|r| "#{r} towvnks (of 2+)" }
+                rr_2plus = result[0].map {|r| "#{r}t owvnks (of 2+)" }
                 [rr_2plus]
               when 2
-                rr2 = result[0].map      {|r| "#{r} towvnks (of 2)" }
-                rr3_plus = result[1].map {|r| "#{r} towvnks (of 3+)"}
+                rr2 = result[0].map      {|r| "#{r}t owvnks (of 2)" }
+                rr3_plus = result[1].map {|r| "#{r}t owvnks (of 3+)"}
                 [rr2, rr3_plus]
               end
             else
               result.map do |verb_form|
                 verb_form.map do |dialectic_option|
-                  "#{dialectic_option} towvnks"
+                  "#{dialectic_option}t owvnks"
                 end
               end
             end
@@ -111,10 +111,10 @@ module Conjugators
             @verb
           end
           results = if verbs_to_conjugate.is_a?(String)
-            [result.map {|r| verbs_to_conjugate.gsub(/etv\z/, 'e ') + r  }]
+            [result.map {|r| verbs_to_conjugate.gsub(/etv\z/, 'et ') + r  }]
           else
             verbs_to_conjugate.map do |verb_to_conjugate|
-              result.map {|r| verb_to_conjugate.gsub(/etv\z/, 'e ') + r }
+              result.map {|r| verb_to_conjugate.gsub(/etv\z/, 'et ') + r }
             end
           end
           if verbs_to_conjugate == @verb

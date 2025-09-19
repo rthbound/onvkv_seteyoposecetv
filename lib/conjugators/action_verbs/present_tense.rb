@@ -22,8 +22,8 @@ module Conjugators
       I_ENDING_REGEX      = /i$/.freeze
       Ē                   = 'ē'.freeze
       IYĒ                 = 'iyē'.freeze
-      E_SPACE             = 'e '.freeze
-      SPACE_TOS           = ' tos'.freeze
+      E_SPACE             = 'et '.freeze
+      SPACE_TOS           = 't os'.freeze
 
       extend Conjugators::ActionVerbs::Shared
       # Note, MVSKOKE language here
@@ -134,17 +134,17 @@ module Conjugators
             if @irregular
               case result.size
               when 1
-                rr_2plus = result[0].map {|r| "#{r} tos (of 2+)" }
+                rr_2plus = result[0].map {|r| "#{r}t os (of 2+)" }
                 [rr_2plus]
               when 2
-                rr2 = result[0].map      {|r| "#{r} tos (of 2)" }
-                rr3_plus = result[1].map {|r| "#{r} tos (of 3+)"}
+                rr2 = result[0].map      {|r| "#{r}t os (of 2)" }
+                rr3_plus = result[1].map {|r| "#{r}t os (of 3+)"}
                 [rr2, rr3_plus]
               end
             else
               result.map do |verb_form|
                 verb_form.map do |dialectic_option|
-                  "#{dialectic_option} tos"
+                  "#{dialectic_option}t os"
                 end
               end
             end

@@ -16,20 +16,20 @@
         assert_equal ["panatskes", "panackes", "panatses"], dig(result, tense: :second_person_plural,   type: :basic_present)[0]
         assert_equal ["panakes"       ], dig(result, tense: :third_person_plural,    type: :basic_present)[0]
 
-        assert_equal ["paniyē tos"    ], dig(result, tense: :first_person_singular,  type: :tos_auxiliary)[0]
-        assert_equal ["panetskē tos", "paneckē tos", "paneccē tos", "panetcē tos", "panetsē tos"], dig(result, tense: :second_person_singular, type: :tos_auxiliary)[0]
-        assert_equal ["panē tos"      ], dig(result, tense: :third_person_singular,  type: :tos_auxiliary)[0]
-        assert_equal ["paneyē tos"    ], dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[0]
-        assert_equal ["panatskē tos", "panackē tos", "panatsē tos"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[0]
-        assert_equal ["panakē tos"    ], dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[0]
+        assert_equal ["paniyēt os"    ], dig(result, tense: :first_person_singular,  type: :tos_auxiliary)[0]
+        assert_equal ["panetskēt os", "paneckēt os", "paneccēt os", "panetcēt os", "panetsēt os"], dig(result, tense: :second_person_singular, type: :tos_auxiliary)[0]
+        assert_equal ["panēt os"      ], dig(result, tense: :third_person_singular,  type: :tos_auxiliary)[0]
+        assert_equal ["paneyēt os"    ], dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[0]
+        assert_equal ["panatskēt os", "panackēt os", "panatsēt os"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[0]
+        assert_equal ["panakēt os"    ], dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[0]
 
-        assert_equal ["pvne towis"    ], dig(result, tense: :first_person_singular,  type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["pvne towetskes", "pvne toweckes", "pvne towecces", "pvne tontces", "pvne tonckes", "pvne tontses"],
+        assert_equal ["pvnet owis"    ], dig(result, tense: :first_person_singular,  type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["pvnet owetskes", "pvnet oweckes", "pvnet owecces", "pvnet ontces", "pvnet onckes", "pvnet ontses"],
           dig(result, tense: :second_person_singular, type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["pvne tos"      ], dig(result, tense: :third_person_singular,  type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["pvne towēs"    ], dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["pvne towatskes", "pvne towackes", "pvne towatses"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["pvne towakes"  ], dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["pvnet os"      ], dig(result, tense: :third_person_singular,  type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["pvnet owēs"    ], dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["pvnet owatskes", "pvnet owackes", "pvnet owatses"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["pvnet owakes"  ], dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[0]
       end
 
       def test_hayetv
@@ -44,20 +44,20 @@
         assert_equal ["hayatskes", "hayackes", "hayatses"], dig(result, tense: :second_person_plural,   type: :basic_present)[0]
         assert_equal ["hayakes"       ], dig(result, tense: :third_person_plural,    type: :basic_present)[0]
 
-        assert_equal ["hayiyē tos"    ], dig(result, tense: :first_person_singular,  type: :tos_auxiliary)[0]
-        assert_equal ["hayetskē tos", "hayeckē tos", "hayeccē tos", "hayetcē tos", "hayetsē tos"], dig(result, tense: :second_person_singular, type: :tos_auxiliary)[0]
-        assert_equal ["hayē tos"      ], dig(result, tense: :third_person_singular,  type: :tos_auxiliary)[0]
-        assert_equal ["hayeyē tos"    ], dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[0]
-        assert_equal ["hayatskē tos", "hayackē tos", "hayatsē tos"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[0]
-        assert_equal ["hayakē tos"    ], dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[0]
+        assert_equal ["hayiyēt os"    ], dig(result, tense: :first_person_singular,  type: :tos_auxiliary)[0]
+        assert_equal ["hayetskēt os", "hayeckēt os", "hayeccēt os", "hayetcēt os", "hayetsēt os"], dig(result, tense: :second_person_singular, type: :tos_auxiliary)[0]
+        assert_equal ["hayēt os"      ], dig(result, tense: :third_person_singular,  type: :tos_auxiliary)[0]
+        assert_equal ["hayeyēt os"    ], dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[0]
+        assert_equal ["hayatskēt os", "hayackēt os", "hayatsēt os"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[0]
+        assert_equal ["hayakēt os"    ], dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[0]
 
-        assert_equal ["haye towis"    ], dig(result, tense: :first_person_singular,  type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["haye towetskes", "haye toweckes", "haye towecces", "haye tontces", "haye tonckes", "haye tontses"],
+        assert_equal ["hayet owis"    ], dig(result, tense: :first_person_singular,  type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["hayet owetskes", "hayet oweckes", "hayet owecces", "hayet ontces", "hayet onckes", "hayet ontses"],
           dig(result, tense: :second_person_singular, type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["haye tos"      ], dig(result, tense: :third_person_singular,  type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["haye towēs"    ], dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["haye towatskes", "haye towackes", "haye towatses"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["haye towakes"  ], dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["hayet os"      ], dig(result, tense: :third_person_singular,  type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["hayet owēs"    ], dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["hayet owatskes", "hayet owackes", "hayet owatses"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["hayet owakes"  ], dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[0]
       end
 
       def test_hueretv
@@ -77,27 +77,27 @@
 
         # Adjectival because I be doing this
         #   that 'ē' is not an l-grade but an adjectival 'ē' in these examples
-        assert_equal ["hueriyē tos"            ], dig(result, tense: :first_person_singular,  type: :tos_auxiliary)[0]
-        assert_equal ["hueretskē tos", "huereckē tos", "huereccē tos", "hueretcē tos", "hueretsē tos"],
+        assert_equal ["hueriyēt os"            ], dig(result, tense: :first_person_singular,  type: :tos_auxiliary)[0]
+        assert_equal ["hueretskēt os", "huereckēt os", "huereccēt os", "hueretcēt os", "hueretsēt os"],
           dig(result, tense: :second_person_singular, type: :tos_auxiliary)[0]
-        assert_equal ["huerē tos"              ], dig(result, tense: :third_person_singular,  type: :tos_auxiliary)[0]
-        assert_equal ["sehokeyē tos (of 2)"    ], dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[0]
-        assert_equal ["sehokatskē tos (of 2)", "sehokackē tos (of 2)", "sehokatsē tos (of 2)"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[0]
-        assert_equal ["sehokē tos (of 2)"      ], dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[0]
-        assert_equal ["svpakleyē tos (of 3+)"  ], dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[1]
-        assert_equal ["svpaklatskē tos (of 3+)", "svpaklackē tos (of 3+)", "svpaklatsē tos (of 3+)"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[1]
-        assert_equal ["svpaklē tos (of 3+)"    ], dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[1]
+        assert_equal ["huerēt os"              ], dig(result, tense: :third_person_singular,  type: :tos_auxiliary)[0]
+        assert_equal ["sehokeyēt os (of 2)"    ], dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[0]
+        assert_equal ["sehokatskēt os (of 2)", "sehokackēt os (of 2)", "sehokatsēt os (of 2)"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[0]
+        assert_equal ["sehokēt os (of 2)"      ], dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[0]
+        assert_equal ["svpakleyēt os (of 3+)"  ], dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[1]
+        assert_equal ["svpaklatskēt os (of 3+)", "svpaklackēt os (of 3+)", "svpaklatsēt os (of 3+)"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[1]
+        assert_equal ["svpaklēt os (of 3+)"    ], dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[1]
 
-        assert_equal ["huere towis"              ], dig(result, tense: :first_person_singular,  type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["huere towetskes", "huere toweckes", "huere towecces", "huere tontces", "huere tonckes", "huere tontses"],
+        assert_equal ["hueret owis"              ], dig(result, tense: :first_person_singular,  type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["hueret owetskes", "hueret oweckes", "hueret owecces", "hueret ontces", "hueret onckes", "hueret ontses"],
           dig(result, tense: :second_person_singular, type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["huere tos"                ], dig(result, tense: :third_person_singular,  type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["sehoke towēs (of 2)"      ], dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["sehoke towatskes (of 2)", "sehoke towackes (of 2)", "sehoke towatses (of 2)"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["sehoke towakes (of 2)"    ], dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["svpakle towēs (of 3+)"    ], dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[1]
-        assert_equal ["svpakle towatskes (of 3+)", "svpakle towackes (of 3+)", "svpakle towatses (of 3+)"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[1]
-        assert_equal ["svpakle towakes (of 3+)"  ], dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[1]
+        assert_equal ["hueret os"                ], dig(result, tense: :third_person_singular,  type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["sehoket owēs (of 2)"      ], dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["sehoket owatskes (of 2)", "sehoket owackes (of 2)", "sehoket owatses (of 2)"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["sehoket owakes (of 2)"    ], dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["svpaklet owēs (of 3+)"    ], dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[1]
+        assert_equal ["svpaklet owatskes (of 3+)", "svpaklet owackes (of 3+)", "svpaklet owatses (of 3+)"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[1]
+        assert_equal ["svpaklet owakes (of 3+)"  ], dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[1]
       end
 
       def test_feketv
@@ -112,21 +112,21 @@
         assert_equal ["fēkatskes", "fēkackes", "fēkatses"], dig(result, tense: :second_person_plural,   type: :basic_present)[0]
         assert_equal ["fēkakes"],   dig(result, tense: :third_person_plural,    type: :basic_present)[0]
 
-        assert_equal ["fēkiyē tos"],   dig(result, tense: :first_person_singular,  type: :tos_auxiliary)[0]
-        assert_equal ["fēketskē tos", "fēkeckē tos", "fēkeccē tos", "fēketcē tos", "fēketsē tos"],
+        assert_equal ["fēkiyēt os"],   dig(result, tense: :first_person_singular,  type: :tos_auxiliary)[0]
+        assert_equal ["fēketskēt os", "fēkeckēt os", "fēkeccēt os", "fēketcēt os", "fēketsēt os"],
           dig(result, tense: :second_person_singular, type: :tos_auxiliary)[0]
-        assert_equal ["fēkē tos"],     dig(result, tense: :third_person_singular,  type: :tos_auxiliary)[0]
-        assert_equal ["fēkeyē tos"],   dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[0]
-        assert_equal ["fēkatskē tos", "fēkackē tos", "fēkatsē tos"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[0]
-        assert_equal ["fēkakē tos"],   dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[0]
+        assert_equal ["fēkēt os"],     dig(result, tense: :third_person_singular,  type: :tos_auxiliary)[0]
+        assert_equal ["fēkeyēt os"],   dig(result, tense: :first_person_plural,    type: :tos_auxiliary)[0]
+        assert_equal ["fēkatskēt os", "fēkackēt os", "fēkatsēt os"], dig(result, tense: :second_person_plural,   type: :tos_auxiliary)[0]
+        assert_equal ["fēkakēt os"],   dig(result, tense: :third_person_plural,    type: :tos_auxiliary)[0]
 
-        assert_equal ["feke towis"],     dig(result, tense: :first_person_singular,  type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["feke towetskes", "feke toweckes", "feke towecces", "feke tontces", "feke tonckes", "feke tontses"],
+        assert_equal ["feket owis"],     dig(result, tense: :first_person_singular,  type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["feket owetskes", "feket oweckes", "feket owecces", "feket ontces", "feket onckes", "feket ontses"],
           dig(result, tense: :second_person_singular, type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["feke tos"],       dig(result, tense: :third_person_singular,  type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["feke towēs"],     dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["feke towatskes", "feke towackes", "feke towatses"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[0]
-        assert_equal ["feke towakes"],   dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["feket os"],       dig(result, tense: :third_person_singular,  type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["feket owēs"],     dig(result, tense: :first_person_plural,    type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["feket owatskes", "feket owackes", "feket owatses"], dig(result, tense: :second_person_plural,   type: :ometv_conjugated_auxiliary)[0]
+        assert_equal ["feket owakes"],   dig(result, tense: :third_person_plural,    type: :ometv_conjugated_auxiliary)[0]
       end
 
       def test_esketv

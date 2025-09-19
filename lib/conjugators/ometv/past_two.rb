@@ -7,12 +7,12 @@ module Conjugators
 
       def self.person_conjugations
         {
-          '1ps' => %w{towivnks},
-          '2ps' => %w{towetskvnks toweckvnks toweccvnks towetcvnks },
-          '3ps' => %w{towvnks},
-          '1pp' => %w{towēyvnks},
-          '2pp' => %w{towatskvnks towackvnks},
-          '3pp' => %w{towakvnks}
+          '1ps' => %w{owivnks},
+          '2ps' => %w{owetskvnks oweckvnks oweccvnks owetcvnks },
+          '3ps' => %w{owvnks},
+          '1pp' => %w{owēyvnks},
+          '2pp' => %w{owatskvnks owackvnks},
+          '3pp' => %w{owakvnks}
         }
       end
 
