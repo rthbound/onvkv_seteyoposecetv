@@ -2,7 +2,7 @@ module Conjugators
   module ActionVerbs
     class PresentTense
       NA                  ="N/A".freeze
-      OMETV_REGEX         = /o[mw]etv/.freeze
+      OMETV_REGEX         = /^o[mw]etv/.freeze
       ETV_REGEX           = /etv$/.freeze
       S                   = ?s.freeze
       ETV                 = "etv".freeze
