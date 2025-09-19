@@ -60,7 +60,7 @@ module Conjugators
           "hesaketv"         => { 1 => "hesaketv",         2 => "hesahoketv"         },
           "hvkvnceropotketv" => { 1 => "hvkvnceropotketv", 2 => "hvkvnceropothoketv" },
           "kvcketv"          => { 1 => "kvcketv",          2 => "kvcēketv"           },
-          "ocetv"            => { 1 => "ocetv",            2 => "svsetv"             },
+          #"ocetv"            => { 1 => "ocetv",            2 => "svsetv"             },
           "taktekaksetv"     => { 1 => "taktekaksetv",     2 => "taktekvstvketv"     },
           "tiyetv"           => { 1 => "tiyetv",           2 => "tihoyetv"           },
           "tonetv"           => { 1 => "tonetv",           2 => "tontuecetv"         },
