@@ -189,6 +189,61 @@
         assert_equal 'wanayvhkes', third_person_plural[0][0]
       end
 
+      # Test diphthong patterns
+      def test_ue_with_c_pattern
+        @subject = 'vrakkuecetv'
+
+        result = conjugate_subject
+
+        first_person_singular = result.dig(:first_person_singular, :basic_past_one)
+        assert_equal 'vrakkuehcis', first_person_singular[0][0]
+      end
+
+      def test_ue_with_k_pattern
+        @subject = 'vkueketv'
+
+        result = conjugate_subject
+
+        first_person_singular = result.dig(:first_person_singular, :basic_past_one)
+        assert_equal 'vkuehkis', first_person_singular[0][0]
+      end
+
+      def test_ue_with_y_pattern
+        @subject = 'lueyetv'
+
+        result = conjugate_subject
+
+        first_person_singular = result.dig(:first_person_singular, :basic_past_one)
+        assert_equal 'luyiyis', first_person_singular[0][0]
+      end
+
+      def test_ue_with_r_pattern
+        @subject = 'hueretv'
+
+        result = conjugate_subject
+
+        first_person_singular = result.dig(:first_person_singular, :basic_past_one)
+        assert_equal 'huyiris', first_person_singular[0][0]
+      end
+
+      def test_ue_with_h_pattern
+        @subject = 'puehetv'
+
+        result = conjugate_subject
+
+        third_person_singular = result.dig(:third_person_singular, :basic_past_one)
+        assert_equal 'puyihes', third_person_singular[0][0]
+      end
+
+      def test_vo_pattern
+        @subject = 'lvoketv'
+
+        result = conjugate_subject
+
+        third_person_singular = result.dig(:third_person_singular, :basic_past_one)
+        assert_equal 'lvwikes', third_person_singular[0][0]
+      end
+
       def conjugate_subject
         Conjugators::ActionVerbs::PastOne.new(@subject).conjugate!
       end

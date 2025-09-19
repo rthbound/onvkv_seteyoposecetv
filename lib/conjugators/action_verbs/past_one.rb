@@ -2,6 +2,12 @@ module Conjugators
   module ActionVerbs
     class PastOne
       extend Conjugators::ActionVerbs::Shared
+
+      # Constants for diphthong patterns
+      UE_CK_PATTERN = /ue[ck]\z/.freeze  # ue followed by c or k
+      UE_OTHER_PATTERN = /ue[^ck]\z/.freeze  # ue followed by other consonants
+      VO_PATTERN = /vok\z/.freeze  # vo followed by k
+
       # SHORTEN, STRESS, ASPIRATE final vowel
       def initialize(verb, irregular_pattern: nil)
         @verb = verb
@@ -194,20 +200,31 @@ module Conjugators
       end
 
       def hgrade_final_vowel!
-        final_vowel_index = @verb_to_conjugate.rindex(/[aeēiov]/)
         hgrade_form = identify_hgrade_form(@verb_to_conjugate)
 
-        if hgrade_form == :basic
-          final_vowel          = @verb_to_conjugate[final_vowel_index]
+        case hgrade_form
+        when :ue_ck_diphthong
+          # -uec- or -uek- h-grades as -uehc- or -uehk-
+          if @verb_to_conjugate.end_with?('uec')
+            @verb_to_conjugate.sub!(/uec\z/, 'uehc')
+          else
+            @verb_to_conjugate.sub!(/uek\z/, 'uehk')
+          end
+        when :ue_other_diphthong
+          # -ue[^ck]- h-grades by changing 'ue' to 'uyi'
+          last_consonant = @verb_to_conjugate[-1]
+          @verb_to_conjugate.sub!(/ue[^ck]\z/, "uyi#{last_consonant}")
+        when :vo_diphthong
+          # -vok- h-grades as -vwik-
+          @verb_to_conjugate.sub!(/vok\z/, 'vwik')
+        when :basic
+          final_vowel_index = @verb_to_conjugate.rindex(/[aeēiov]/)
+          final_vowel = @verb_to_conjugate[final_vowel_index]
           h_graded_final_vowel = self.class.basic_hgrades[final_vowel]
-
           @verb_to_conjugate[final_vowel_index] = h_graded_final_vowel
-
-        elsif hgrade_form == :double_consonant
-
+        when :double_consonant
           @verb_to_conjugate[-1] = 'iy' #e.g. kerr -> keriy
-        elsif hgrade_form == :kk_or_consonant_cluster
-
+        when :kk_or_consonant_cluster
           @verb_to_conjugate[-1] = "i#{@verb_to_conjugate[-1]}" #e.g. homp -> homip
         end
 
@@ -215,6 +232,11 @@ module Conjugators
       end
 
       def identify_hgrade_form(verb)
+        # First check for diphthong patterns
+        return :ue_ck_diphthong if verb.match?(UE_CK_PATTERN)
+        return :ue_other_diphthong if verb.match?(UE_OTHER_PATTERN)
+        return :vo_diphthong if verb.match?(VO_PATTERN)
+
         final_vowel_index = verb.rindex(/[aeēiouv]/)
 
         # what is to the right of that final vowel
