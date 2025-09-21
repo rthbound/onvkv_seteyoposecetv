@@ -18,12 +18,17 @@ module Conjugators
             basic:              conjugate(tense: :conjugate_2ps, type: :basic),
             polite:             conjugate(tense: :conjugate_2ps, type: :polite),
             do_not:             conjugate(tense: :conjugate_2ps, type: :do_not),
+            let_it:             conjugate(tense: :conjugate_2ps, type: :let_it),
+            you_must:          conjugate(tense: :conjugate_2ps, type: :you_must),
+            you_must_not:      conjugate(tense: :conjugate_2ps, type: :you_must_not),
           },
           second_person_plural: {
             basic:              conjugate(tense: :conjugate_2pp, type: :basic),
             polite:             conjugate(tense: :conjugate_2pp, type: :polite),
             do_not:             conjugate(tense: :conjugate_2pp, type: :do_not),
             lets:               conjugate(tense: :conjugate_2pp, type: :lets),
+            you_must:           conjugate(tense: :conjugate_2pp, type: :you_must),
+            you_must_not:       conjugate(tense: :conjugate_2pp, type: :you_must_not),
           },
         }
       end
@@ -55,7 +60,7 @@ module Conjugators
               end
             end
           end
-        when :basic, :polite, :lets
+        when :basic, :polite, :lets, :let_it, :you_must, :you_must_not
           result = send(tense, type)
           if result[0].is_a?(String)
             [result.map {|r| r + ?s     }]
@@ -144,7 +149,18 @@ module Conjugators
             '2pp' => %w{ ekot },
           },
           lets: {
-            '2pp' => %w{ vkēt },
+            '2pp' => %w{ vkē vkēt },
+          },
+          let_it: {
+            '2ps' => %w{ ekv },
+          },
+          you_must: {
+            '2ps' => ["vccv", "et owvccv" ],
+            '2pp' => ["vkvccv", "et owvkvccv" ],
+          },
+          you_must_not: {
+            '2ps' => ["ekot owvccv" ],
+            '2pp' => ["ekot owvkvccv" ],
           },
         }
       end
