@@ -51,6 +51,11 @@ module Conjugators
       def conjugate(type:, tense:)
         @type = type
         @tense = tense
+
+        if @type == :ometv_conjugated_auxiliary && @tense == :conjugate_3pp
+          @type = type = :tos_auxiliary
+        end
+
         case type
         when :basic
           result = send(tense)
