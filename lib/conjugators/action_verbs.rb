@@ -5,6 +5,7 @@ require_relative 'action_verbs/past_one'
 require_relative 'action_verbs/past_three'
 require_relative 'action_verbs/past_two'
 require_relative 'action_verbs/present_tense'
+require_relative 'action_verbs/vhan'
 
 module Conjugators
   module ActionVerbs
